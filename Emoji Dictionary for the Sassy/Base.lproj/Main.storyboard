@@ -62,24 +62,52 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a lovely church" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgp-zf-j0S">
-                                <rect key="frame" x="103" y="393" width="169" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Definition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgp-zf-j0S">
+                                <rect key="frame" x="151.5" y="393" width="73" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luk-OH-paI">
+                                <rect key="frame" x="152.5" y="433.5" width="70.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Q2-xt-0Zn">
+                                <rect key="frame" x="138.5" y="473.5" width="98" height="20.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4vu-rE-AyH">
+                                        <rect key="frame" x="0.0" y="0.0" width="98" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Duz-b3-VLO">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Kgp-zf-j0S" firstAttribute="top" secondItem="C5L-IV-56X" secondAttribute="bottom" constant="50" id="6AF-Dp-d5C"/>
+                            <constraint firstItem="6Q2-xt-0Zn" firstAttribute="centerX" secondItem="5tj-QL-tHF" secondAttribute="centerX" id="6xP-c5-ly5"/>
+                            <constraint firstItem="luk-OH-paI" firstAttribute="centerX" secondItem="5tj-QL-tHF" secondAttribute="centerX" id="DqS-zg-QsQ"/>
                             <constraint firstItem="C5L-IV-56X" firstAttribute="top" secondItem="aKU-zs-1Sx" secondAttribute="bottom" constant="40" id="Eki-If-F6C"/>
+                            <constraint firstItem="luk-OH-paI" firstAttribute="top" secondItem="Kgp-zf-j0S" secondAttribute="bottom" constant="20" id="Hc2-Is-nF7"/>
                             <constraint firstItem="Kgp-zf-j0S" firstAttribute="centerX" secondItem="5tj-QL-tHF" secondAttribute="centerX" id="Y82-FP-v5q"/>
                             <constraint firstItem="C5L-IV-56X" firstAttribute="centerX" secondItem="5tj-QL-tHF" secondAttribute="centerX" id="YfX-zp-6KY"/>
+                            <constraint firstItem="6Q2-xt-0Zn" firstAttribute="top" secondItem="luk-OH-paI" secondAttribute="bottom" constant="20" id="Yu7-qI-Clh"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="categoryLabel" destination="luk-OH-paI" id="AlE-Og-EJN"/>
                         <outlet property="definitionLabel" destination="Kgp-zf-j0S" id="iET-De-hlH"/>
                         <outlet property="emojiLabel" destination="C5L-IV-56X" id="W3r-go-nyW"/>
+                        <outlet property="releaseyearLabel" destination="Duz-b3-VLO" id="0CO-fz-WaD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TIN-33-Oyv" userLabel="First Responder" sceneMemberID="firstResponder"/>
